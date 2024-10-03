@@ -1,16 +1,17 @@
 import React, { Component } from 'react'
-import { Text, View, StyleSheet, Image } from 'react-native-web'
+import { Text, View, StyleSheet, Image } from 'react-native'
 import Icon from './assets/icon.jpg'
 
 export default class App extends Component {
 	render() {
+		console.log(Icon)
 		return (
 			<View style={Styles.container}>
 				<Text style={Styles.textStyle}>
 					Welcome to react-native Hello world!
 				</Text>
 				<br />
-				<Image source={{ uri: Icon }} style={Styles.imageStyle} />
+				<Image source={Icon} style={Styles.imageStyle} />
 			</View>
 		)
 	}
