@@ -23,30 +23,20 @@ module.exports = {
 							'@babel/preset-react',
 							'module:metro-react-native-babel-preset'
 						],
-						plugins: ['react-native-web', 'babel-plugin-react-native-web']
+						plugins: ['react-native-web']
 					}
 				}
 			},
 			{
-				test: /\.(png|jpe?g|gif|svg)$/,
+				test: /\.(png|jpe?g|gif|svg|webp)$/,
 				use: [
 					{
 						loader: 'file-loader',
 						options: {
-							name: '[name].[ext]' // Define the output path and filename
+							name: './assets/[name].[ext]' // Define the output path and filename
 						}
 					}
 				]
-			},
-			{
-				test: /\.(gif|jpe?g|png|svg)$/,
-				use: {
-					loader: 'url-loader',
-					options: {
-						name: '[name].[ext]',
-						esModule: false
-					}
-				}
 			}
 		]
 	},
@@ -55,8 +45,7 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			title: 'MyApp',
 			template: './index.html'
-		})
-		/*
+		}),
 		new CopyWebpackPlugin({
 			patterns: [
 				{
@@ -64,7 +53,7 @@ module.exports = {
 					to: './assets' // Destination directory in the build output
 				}
 			]
-		})*/
+		})
 	],
 	devServer: {
 		static: path.join(__dirname, './index.html'),

@@ -4,5 +4,5 @@ module.exports = {
 		'@babel/preset-react',
 		'module:metro-react-native-babel-preset'
 	],
-	plugins: ['react-native-web', 'babel-plugin-react-native-web']
+	plugins: ['react-native-web']
 }
