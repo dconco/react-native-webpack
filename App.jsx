@@ -23,21 +23,18 @@ function App() {
 				<Text style={styles.title}>React Native for Web</Text>
 			</View>
 			<Text style={styles.text}>
-				This is an example of an app built with&nbsp;
-				<Link href='https://github.com/facebook/create-react-app'>
-					Create React App&nbsp;
+				This is an example of an app built with{' '}
+				<Link href='https://github.com/dconco/react-webpack'>
+					React Webpack{' '}
 				</Link>
-				and&nbsp;
-				<Link href='https://github.com/necolas/react-native-web'>
+				and{' '}
+				<Link href='https://github.com/dconco/react-native-web'>
 					React Native for Web
 				</Link>
 			</Text>
 			<Text style={styles.text}>
-				To get started, edit&nbsp;
-				<Link
-					href='https://codesandbox.io/s/q4qymyp2l6/'
-					style={styles.code}
-				>
+				To get started, edit{' '}
+				<Link href='#' style={styles.code}>
 					src/App.jsx
 				</Link>
 				.
